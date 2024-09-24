@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>JavaScript Arrays</h1>
+    <p id = "demo"></p>
+    <p id = "demo1"></p>
+    <p id = "demo2"></p>
+
+    <p id = "demo3"></p>
+    <p id = "loops"></p>
+    <p id="addingArrays"></p>
+
+    <p id = "max"></p>
+    <p id = "min"></p>
+    <p id = "reverse"></p>
+
+    <script>
+        var fruits = ["apple", "dragon fruit","banana","grape","strawberry","plum","tomato"];
+        document.getElementById("demo").innerHTML = fruits;
+        document.getElementById("demo1").innerHTML = fruits[0];
+        document.getElementById("demo2").innerHTML = fruits[4];
+
+        //operations
+        document.getElementById("demo3").innerHTML =  fruits.length;
+        var fruitValue = "";
+        for (var i = 0; i< fruits.length; i++){
+            fruitValue += fruits[i] + "<br>";
+        }
+        document.getElementById("loops").innerHTML = fruitValue;
+
+        var newItem = fruits.push("blackberry")
+        document.getElementById("addingArrays").innerHTML = newItem;
+        document.getElementById("demo").innerHTML = fruits;
+
+        fruits.pop()
+        document.getElementById("demo").innerHTML = fruits;
+
+        var numbers = [1, 20, 34, 67, 90, 35, 64, 900, 345, 280, 67];
+        //Max
+        var maxiumNumber = Math.max.apply(Math, numbers);
+        document.getElementById("max").innerHTML = maxiumNumber;
+        //Min
+        var minmumNumber = Math.min.apply(Math, numbers);
+        document.getElementById("min").innerHTML = minmumNumber;
+        //Reverse order
+        var reverseOrder = numbers.reverse()
+        document.getElementById("reverse").innerHTML = reverseOrder;
+    </script>
+
+</body>
+</html>
